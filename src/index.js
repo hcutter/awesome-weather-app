@@ -81,8 +81,8 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
 
-let form = document.querySelector("#searchCity");
-form.addEventListener("click", citySubmit);
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", citySubmit);
 
 searchCity("Charleston");
 
