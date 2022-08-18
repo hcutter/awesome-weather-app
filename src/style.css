@@ -1,0 +1,154 @@
+body {
+  font-family: sans-serif;
+}
+
+.weather-app {
+  background-color: #f4f1de;
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px #e07a5f;
+  display: block;
+  margin: 0 auto;
+  width: 650px;
+  height: 450px;
+}
+
+.search-bar {
+  align-items: center;
+  background-color: #f4f1de;
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  padding: 9px;
+  position: relative;
+  top: 15px;
+  margin: 0px auto;
+  border-radius: 15px;
+  box-shadow: 3px 3px 6px #e07a5f;
+}
+
+.magnifying-glass {
+  color: #3d405b;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+input {
+  margin-left: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f4f1de;
+}
+
+button {
+  border: none;
+  border-radius: 15px !important;
+  padding: 7px;
+  background: #f2cc8f;
+  color: #3d405b;
+  box-shadow: 2px 2px 2px #f2cc8f;
+  margin-left: 10px;
+}
+
+#currentLocation {
+  background: #81b29a;
+}
+
+button:hover {
+  border: none;
+  border-radius: 15px;
+  background: #f4f1de;
+  color: #3d405b;
+}
+
+#currentLocation:hover {
+  background: #f4f1de;
+}
+
+.weather-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  padding: 5px;
+}
+
+.temperature {
+  display: inline;
+}
+
+h1 {
+  color: #e07a5f;
+  text-align: center;
+}
+
+a {
+  color: #81b29a;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+  color: #81b29a;
+  text-decoration: underline;
+}
+
+.emojiWeather {
+  font-size: 40px;
+  text-align: center;
+}
+
+.conditionWeather {
+  color: #3d405b;
+  text-align: center;
+  position: relative;
+  left: -19px;
+}
+
+h2 {
+  color: #81b29a;
+  text-align: left;
+  position: relative;
+  left: 100px;
+}
+
+.dayTime {
+  color: #3d405b;
+  position: relative;
+  left: 70px;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.col-2 {
+  position: relative;
+  top: 10px;
+  margin: 0px 0px;
+  padding: 5px;
+  box-shadow: #e07a5f 3px 3px 6px;
+  max-width: 600px;
+  border: none;
+  border-radius: 15px;
+}
+
+.card-body {
+  background-color: #f4f1de;
+  border-radius: 15px;
+  padding: 5px 0px;
+}
+
+h5 {
+  color: #81b29a;
+}
+
+.rain {
+  color: #3d405b;
+}
+
+p {
+  color: #e07a5f;
+}
