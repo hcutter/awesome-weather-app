@@ -2,13 +2,16 @@ body {
   font-family: sans-serif;
 }
 
+.weather-app-wrapper {
+  margin: 30px auto;
+  width: 650px;
+}
+
 .weather-app {
   background-color: #f4f1de;
   border-radius: 20px;
   box-shadow: 3px 3px 6px #e07a5f;
   display: block;
-  margin: 0 auto;
-  width: 650px;
   height: 450px;
 }
 
@@ -155,6 +158,4 @@ p {
 
 small {
   color: #e07a5f;
-  display: block;
-  margin: 0 auto;
 }
