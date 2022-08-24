@@ -45,7 +45,8 @@ if (minutes < 10) {
 newTime.innerHTML = `${hours}:${minutes}`;
 
 function cityTemperature(response) {
-  console.log(response.data);
+  let iconElement = document.querySelector("#icon");
+
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#tempNumber").innerHTML = Math.round(
     response.data.main.temp
@@ -56,6 +57,10 @@ function cityTemperature(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function searchCity(city) {
