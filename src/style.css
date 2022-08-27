@@ -98,7 +98,7 @@ a {
 }
 
 a:hover {
-  color: #81b29a;
+  color: #e07a5f;
   cursor: default;
   text-decoration: none;
 }
@@ -116,7 +116,7 @@ a:hover {
 }
 
 h2 {
-  color: #81b29a;
+  color: #f2cc8f;
   text-align: left;
   position: relative;
   left: 100px;
@@ -163,4 +163,8 @@ p {
 
 small {
   color: #e07a5f;
+}
+
+.code {
+  color: #81b29a;
 }

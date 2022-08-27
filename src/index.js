@@ -89,12 +89,16 @@ function getCurrentLocation(event) {
 function displayFahrenheitTemp(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#tempNumber");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
 function displayCelsiusTemp(event) {
   event.preventDefault();
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
 }
 
