@@ -47,10 +47,10 @@ newTime.innerHTML = `${hours}:${minutes}`;
 function cityTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemp = response.data.main.temp;
+
   document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#tempNumber").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -86,6 +86,20 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchCurrentLocation);
 }
 
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#tempNumber");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", citySubmit);
 
@@ -93,3 +107,9 @@ searchCity("Charleston");
 
 let currentLocationButton = document.querySelector("#currentLocationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);

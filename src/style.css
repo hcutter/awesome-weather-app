@@ -8,7 +8,7 @@ body {
 }
 
 .weather-app {
-  background-color: #f4f1de;
+  background: linear-gradient(#81b29a, #f4f1de);
   border-radius: 20px;
   box-shadow: 3px 3px 6px #e07a5f;
   display: block;
@@ -82,19 +82,25 @@ button:hover {
 
 h1 {
   color: #e07a5f;
+  font-size: 40px;
   text-align: center;
 }
 
 a {
-  color: #81b29a;
+  color: #f2cc8f;
   font-size: 15px;
   text-decoration: none;
   text-align: center;
 }
 
+.active {
+  color: #e07a5f;
+}
+
 a:hover {
   color: #81b29a;
-  text-decoration: underline;
+  cursor: default;
+  text-decoration: none;
 }
 
 .emojiWeather {
@@ -140,7 +146,6 @@ ul {
 
 .card-body {
   background-color: #f4f1de;
-  border-radius: 15px;
   padding: 5px 0px;
 }
 
