@@ -102,6 +102,37 @@ function displayCelsiusTemp(event) {
   document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector(
+    "#weather-forecast-temperatures"
+  );
+  let forecastHTML = `
+  <div class="row justify-content-center">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+
+  days.forEach(function (days) {
+    forecastHTML =
+      forecastHTML +
+      `
+        <div class="col-2">
+          <div class="weather-forecast-date">${days}</div>
+          <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="60px">
+          <div class="weather-forecast-temperatures">
+            <span class="weather-forecast-temperature-max">20°</span>
+            |
+            <span class="weather-forecast-temperature-min">12°</span>
+          </div>	
+        </div>`;
+  });
+
+  forecastHTML =
+    forecastHTML +
+    `</div>
+  `;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemp = null;
 
 let form = document.querySelector("#search-bar");

@@ -144,21 +144,20 @@ ul {
   border-radius: 15px;
 }
 
-.card-body {
-  background-color: #f4f1de;
-  padding: 5px 0px;
+.weather-forecast-date {
+  color: #f2cc8f;
 }
 
-h5 {
-  color: #81b29a;
-}
-
-.rain {
+.weather-forecast-temperatures {
   color: #3d405b;
 }
 
-p {
+.weather-forecast-temperature-max {
   color: #e07a5f;
+}
+
+.weather-forecast-temperature-min {
+  color: #81b29a;
 }
 
 small {
