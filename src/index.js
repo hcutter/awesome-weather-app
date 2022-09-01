@@ -139,6 +139,7 @@ let form = document.querySelector("#search-bar");
 form.addEventListener("submit", citySubmit);
 
 searchCity("Charleston");
+displayForecast();
 
 let currentLocationButton = document.querySelector("#currentLocationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
