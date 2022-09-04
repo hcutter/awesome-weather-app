@@ -53,10 +53,10 @@ function getForecast(coordinates) {
 function cityTemperature(response) {
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemp = response.data.main.temp;
+  fahrenheitTemp = response.data.main.temp;
 
   document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
+  document.querySelector("#tempNumber").innerHTML = Math.round(fahrenheitTemp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -74,7 +74,7 @@ function cityTemperature(response) {
 
 function searchCity(city) {
   let apiKey = "e487ad872752ff8b32a9f28dbc0c6d35";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial`;
   axios.get(`${url}&appid=${apiKey}`).then(cityTemperature);
 }
 
@@ -86,7 +86,7 @@ function citySubmit(event) {
 
 function searchCurrentLocation(position) {
   let apiKey = "e487ad872752ff8b32a9f28dbc0c6d35";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
   axios.get(url).then(cityTemperature);
 }
 
@@ -100,7 +100,6 @@ function displayFahrenheitTemp(event) {
   let tempElement = document.querySelector("#tempNumber");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
@@ -108,6 +107,7 @@ function displayCelsiusTemp(event) {
   event.preventDefault();
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
+  let celsiusTemp = ((fahrenheitTemp - 32) * 5) / 9;
   document.querySelector("#tempNumber").innerHTML = Math.round(celsiusTemp);
 }
 
@@ -162,7 +162,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-let celsiusTemp = null;
+let fahrenheitTemp = null;
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", citySubmit);
