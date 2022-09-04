@@ -164,8 +164,9 @@ ul {
   color: #81b29a;
 }
 
-small {
+footer {
   color: #e07a5f;
+  text-align: center;
 }
 
 .code {
