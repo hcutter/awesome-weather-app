@@ -51,6 +51,7 @@ button {
   color: #3d405b;
   box-shadow: 2px 2px 2px #e07a5f;
   margin-left: 10px;
+  transition: all 200ms ease;
 }
 
 #currentLocation {
@@ -82,13 +83,13 @@ button:hover {
 
 h1 {
   color: #e07a5f;
-  font-size: 40px;
+  font-size: 45px;
   text-align: center;
 }
 
 a {
   color: #f2cc8f;
-  font-size: 15px;
+  font-size: 18px;
   text-decoration: none;
   text-align: center;
 }
@@ -110,6 +111,7 @@ a:hover {
 
 .conditionWeather {
   color: #3d405b;
+  font-size: 18px;
   text-align: center;
   position: relative;
   left: -19px;
@@ -117,6 +119,7 @@ a:hover {
 
 h2 {
   color: #f2cc8f;
+  font-size: 36px;
   text-align: left;
   position: relative;
   left: 100px;
@@ -142,6 +145,7 @@ ul {
   max-width: 600px;
   border: none;
   border-radius: 15px;
+  font-size: 18px;
 }
 
 .weather-forecast-date {
