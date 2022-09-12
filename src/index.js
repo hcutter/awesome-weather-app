@@ -80,6 +80,8 @@ function searchCity(city) {
 
 function citySubmit(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let city = document.querySelector("#inputCity").value;
   searchCity(city);
 }
